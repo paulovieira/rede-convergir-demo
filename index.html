@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Rede convergir demo</title>
+
+    <link href="client/common/css/bootstrap_3.3.2.LUMEN.css" rel="stylesheet" />
+    <!--
+    <link href="client/common/css/bootstrap_3.3.2-theme.ORIGINAL.css" rel="stylesheet" />
+
+    <link href="client/common/css/bootstrap_3.3.2.ORIGINAL.css" rel="stylesheet" />
+    <link href="client/common/css/bootstrap_3.3.2.FLATLY.css" rel="stylesheet" />
+    <link href="client/common/css/bootstrap_3.3.2.UNITED.css" rel="stylesheet" />
+    <link href="client/common/css/bootstrap_3.3.2.LUMEN.css" rel="stylesheet" />
+    <link href="client/common/css/bootstrap_3.3.2.SANDSTONE.css" rel="stylesheet" />
+    <link href="client/common/css/bootstrap_3.3.2.YETI.css" rel="stylesheet" />
+
+-->
+
+
+    <link href="client/common/css/main.css" rel="stylesheet" />
+    <link href="client/common/js/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="client/common/images/convergir_logo.png" class="img-responsive" width="140px;">
+                </a>
+            </div>
+
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Início<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="#">Eventos</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contribuir <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Novo projecto</a>
+                            </li>
+                            <li><a href="#">Novo evento</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="navbar-form navbar-right" role="search">
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pesquisar">
+                        <span class="input-group-btn">
+					        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </form>
+
+
+            </div>
+            
+        </div>
+        
+    </nav>
+
+
+
+
+    <div class="container-fluid" id="main">
+        <div class="row">
+            <div class="col-sm-5" style="xborder: solid; overflow-y: scroll; padding: 25px 20px;" id="list">
+<!--
+<h2>fwenf iwenf</h2>
+<p>fwefwefwe</p>
+<p>fwefwefwe fweoi fiw efniow nfo</p>
+<p>ogi ngio ndfgoi fwefwefwe fweoi fiw efniow nfo</p>
+
+<h2>fwenf iwenf</h2>
+<p>fwefwefwe</p>
+<p>fwefwefwe fweoi fiw efniow nfo</p>
+<p>ogi ngio ndfgoi fwefwefwe fweoi fiw efniow nfo</p>
+
+<h2>fwenf iwenf</h2>
+<p>fwefwefwe</p>
+<p>fwefwefwe fweoi fiw efniow nfo</p>
+<p>ogi ngio ndfgoi fwefwefwe fweoi fiw efniow nfo</p>
+
+<h2>fwenf iwenf</h2>
+<p>fwefwefwe</p>
+<p>fwefwefwe fweoi fiw efniow nfo</p>
+<p>ogi ngio ndfgoi fwefwefwe fweoi fiw efniow nfo</p>
+
+<h2>fwenf iwenf</h2>
+<p>fwefwefwe</p>
+<p>fwefwefwe fweoi fiw efniow nfo</p>
+<p>ogi ngio ndfgoi fwefwefwe fweoi fiw efniow nfo</p>
+
+<h2>fwenf iwenf</h2>
+<p>fwefwefwe</p>
+<p>fwefwefwe fweoi fiw efniow nfo</p>
+<p>ogi ngio ndfgoi fwefwefwe fweoi fiw efniow nfo</p>
+
+<h2>fwenf iwenf</h2>
+<p>fwefwefwe</p>
+<p>fwefwefwe fweoi fiw efniow nfo</p>
+<p>ogi ngio ndfgoi fwefwefwe fweoi fiw efniow nfo</p>
+-->
+                <div style="margin-bottom: 5px;">Filtrar por:</div>
+
+                <div class="row">
+                    <div class="col-sm-3" style="padding-right: 0px;">
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default ">Zona</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Todos
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li class="divider"></li>
+
+
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Norte
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Centro
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Sul
+                                        </label>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5" style="padding-right: 0px;">
+
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default ">Tipo de projecto</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Todos
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li class="divider"></li>
+
+
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Transição
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Permacultura
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Gestão da Terra e da Natureza
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Espaço Construído
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Ferramentas e Tecnologias
+                                        </label>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-4" style="padding-right: 0px;">
+
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default ">Domínio-chave</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Todos
+                                        </label>
+                                    </div>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Agricultura
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Pecuária
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Bio-Construção
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Eco-Tecnologia
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Arte
+                                        </label>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+				<hr>	
+                
+                <div id="list-region"></div>
+
+
+
+            </div>
+
+            <div class="col-sm-7" style="xborder: solid;" id="map-region">
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer text-center">
+        footer content
+    </footer>
+    <!--
+-->
+
+    <script src="client/common/js/jquery.js"></script>
+    <script src="client/common/js/jquery.scrollTo.js"></script>
+    <script src="client/common/js/bootstrap_3.3.2.js"></script>
+    <script src="client/common/js/q.js"></script>
+    <script src="client/common/js/underscore.js"></script>
+    <script src="client/common/js/backbone.js"></script>
+    <script src="client/common/js/backbone.radio.js"></script>
+    <script src="client/common/js/backbone.marionette.js"></script>
+    <script src="client/common/js/backbone_override.js"></script>
+    <script src="client/common/js/nunjucks-slim.js"></script>
+    <script src="client/common/js/leaflet-0.7.3/leaflet.js"></script>
+
+    <script src="client/main/templates.js"></script> 
+    <script src="client/main/rede-convergir.js"></script>
+</body>
+
+</html>

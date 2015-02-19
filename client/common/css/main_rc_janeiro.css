@@ -1,0 +1,47 @@
+html {
+  position: relative; 
+  min-height: 100%;
+}
+
+body {
+/*	padding-top: 0px; */
+	margin-bottom: 60px;
+}
+
+#map {
+/*	height: 100%; 
+  height: 100px; */
+}
+
+.scroll-test {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+
+
+/* sticky footer - taken from http://getbootstrap.com/examples/sticky-footer/*/
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* height of the footer - must be the same as margin-bottom of body  */
+	height: 60px;
+	background-color: #ddd;
+}
+
+dd {
+  margin-bottom: 12px;
+}
+
+.b-shadow {
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(50, 50, 50, 0.25);
+  -moz-box-shadow:    1px 1px 3px 1px rgba(50, 50, 50, 0.25);
+  box-shadow:         1px 1px 3px 1px rgba(50, 50, 50, 0.25);
+}
+
+.checkbox {
+  padding: 0px 5px;
+  padding-left: 20px;
+};
