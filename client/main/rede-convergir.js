@@ -88,6 +88,9 @@ var projectsC = new ProjectsC(projectsData);
 
 
 var ProjectLV = Mn.LayoutView.extend({
+	initialize: function(){
+		this.$el.attr("id", "project-" + this.model.get("id"));
+	},
 	modelEvents: {
 		"click:marker":"clickMarker"
 	},
@@ -100,9 +103,17 @@ var ProjectLV = Mn.LayoutView.extend({
 
 var ProjectsCV = Mn.CollectionView.extend({
 	childView: ProjectLV,
+	//id: "js-projects-container",
 	childEvents: {
 		"click:marker": function(childView){
-			debugger;
+			//this.$el.scrollTo(childView.$el, 800);
+			//this.$el.scrollTo('+=400px', 800);
+
+			childView.$el.ScrollTo({
+			    // duration: 2000,
+			    // easing: 'linear'
+			});
+
 		}
 	},
 	onAttach: function(){
